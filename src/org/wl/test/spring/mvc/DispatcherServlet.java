@@ -168,6 +168,8 @@ public class DispatcherServlet extends HttpServlet {
      * @param resp
      */
     private void doDispatcher(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        req.setCharacterEncoding("utf-8");
+        resp.setContentType("text/html;charset=UTF-8");
 
         String contextUrl = req.getContextPath();
         String requestUrl = req.getRequestURI();
